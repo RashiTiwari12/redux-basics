@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateName } from './nameSlice'
+import { useDispatch, useSelector } from 'react-redux' //selector is used to get state value. dispatch is used to update
+import { updateName } from './nameSlice' // updatename is imported here so that can be used at time of dispatch as type
 import Select from 'react-select'
 let M;
 let tags = [
@@ -19,7 +19,7 @@ let tags = [
   }
 ]
 const App = () => {
-  let fullname = useSelector((state) => state.personName)
+  let fullname = useSelector((state) => state.personName)  //value of slice is always stored in state becauise of redux provider
   let dispatch = useDispatch()
   function submitForm(e) {
     e.preventDefault();
